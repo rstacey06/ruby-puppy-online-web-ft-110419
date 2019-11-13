@@ -5,6 +5,7 @@ class Dog
   
   def initialize(name)
     @name = name
+    save
   end
   
   def self.all 
@@ -12,7 +13,7 @@ class Dog
   end
   
   def self.print_all 
-    puts @@all.map{ |dog| dog.name }
+    puts @@all.collect {|dog| dog.name}
   end
   
   
